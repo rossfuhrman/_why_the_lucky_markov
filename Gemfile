@@ -4,11 +4,7 @@ gem "rake"
 
 gem "rack"
 gem "roda"
-gem "sinatra"
 gem "camping"
-gem "grape"
-
-gem "httparty"
 
 gem "marky_markov"
 
