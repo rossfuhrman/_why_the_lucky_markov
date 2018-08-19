@@ -4,6 +4,7 @@ gem "rake"
 
 gem "rack"
 gem "roda"
+gem "sinatra"
 gem "camping"
 
 gem "marky_markov"
