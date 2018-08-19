@@ -12,7 +12,7 @@ class Toot
   end
 
   def self.repo_url
-    "#{ENV["WHYBOT_GITHUB_USER"]}/#{ENV["WHYBOT_GITHUB_REPO"]}"
+    "rossfuhrman/#{ENV["WHYBOT_GITHUB_REPO"]}"
   end
 
   def self.new_toot
