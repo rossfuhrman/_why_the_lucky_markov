@@ -53,12 +53,9 @@ class Toot
 
     open_issues_by_owner = github_client.issues(repo_url, state: "open", creator: ENV["WHYBOT_GITHUB_USER"])
 
-    #ugggghhh
-    initial_comment = 1
-
     open_issues_by_owner.each do |issue|
       #TODO this doesn't prevent anyone from spamming the upvotes
-      if issue.comments - initial_comment >= ENV["WHYBOT_POSTING_THRESHOLD"].to_i
+      if issue.comments >= ENV["WHYBOT_POSTING_THRESHOLD"].to_i
         post_phase_ii_of_new_toot(issue.title)
         puts "closing issue for toot: #{toot}"
         github_client.close_issue(repo_url, issue.number)
